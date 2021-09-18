@@ -1,0 +1,141 @@
+body {
+  background-color: hsl(210, 46%, 95%);
+  font-family: "Barlow Semi Condensed";
+}
+
+// colors:
+$purple: hsl(263, 55%, 52%);
+$white: hsl(0, 0%, 100%);
+$darkBlue: hsl(219, 22%, 18%);
+$lightBlue: hsl(217, 19%, 35%);
+$lightGray: hsl(0, 0%, 81%);
+$lightGrayBlue: hsl(210, 46%, 95%);
+// font styling for user section
+.name {
+  color: $white;
+  // for targeting <div class="name whiteUser">
+  &.whiteUser {
+    color: $darkBlue;
+  }
+}
+
+// verification styling
+.verification {
+  color: hsla(210, 46%, 95%, 0.4);
+}
+
+// main styling
+main {
+  font-size: 13px;
+}
+
+// images in user styling
+img {
+  border-radius: 100%;
+  height: 2rem;
+  border: hsla(210, 46%, 95%, 0.329) solid 2px;
+}
+
+// container styling
+.container {
+  padding: 8rem;
+  display: grid;
+  grid-gap: 1.5rem;
+  grid-template-columns: repeat(4, 1fr);
+  // grid-column: 2;
+  grid-template-areas:
+    "purple      purple lightBlue  white2"
+    "white1 darkBlue  darkBlue white2";
+}
+
+// user styling
+
+// user name and verification position move
+
+.user {
+  display: inline-block;
+  position: relative;
+  bottom: 0.2rem;
+  left: 1em;
+}
+
+.name {
+  bottom: 1.3rem;
+  left: 1rem;
+}
+
+.verification {
+  right: 4rem;
+}
+
+// card styling
+.card {
+  border-radius: 10px;
+  padding: 2rem;
+  color: $white;
+
+  &.purpleCard {
+    background-image: url("/testimonials/images/bg-pattern-quotation.svg");
+    background-repeat: no-repeat;
+    background-position: top right 5em;
+    background-color: $purple;
+    // grid-column-end: span 2;
+    grid-area: purple;
+  }
+  &.darkBlueCard {
+    background-color: $darkBlue;
+    grid-area: darkBlue;
+  }
+
+  &.lightBlueCard {
+    background-color: $lightBlue;
+    // grid-column-end: span 2;
+    grid-area: lightBlue;
+  }
+}
+
+.whiteCard1,
+.whiteCard2 {
+  background-color: $white;
+
+  .verification {
+    color: hsla(219, 22%, 18%, 0.3);
+    font-weight: bold;
+  }
+  .name {
+    font-weight: bold;
+  }
+
+  p,
+  h1 {
+    color: hsla(219, 22%, 18%, 0.7);
+  }
+
+  img {
+    border: hsla(210, 10%, 12%, 0.329) solid 2px;
+  }
+  // grid-row: 1 / span 2;
+  // grid-column-end: -1;
+}
+
+p {
+  color: hsla(0, 0%, 81%, 0.7);
+  line-height: 1.3rem;
+  font-size: 1.2em;
+}
+
+.whiteCard1 {
+  grid-area: white1;
+}
+
+.whiteCard2 {
+  grid-area: white2;
+}
+
+@media only screen and (max-width: 700px) {
+  .container {
+    padding: 4rem;
+    display: flex;
+    flex-direction: column;
+  }
+}

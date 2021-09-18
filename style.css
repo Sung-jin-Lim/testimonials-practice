@@ -1,0 +1,145 @@
+body {
+  background-color: #ecf2f8;
+  font-family: "Barlow Semi Condensed";
+}
+
+.name {
+  color: white;
+}
+
+.name.whiteUser {
+  color: #242b38;
+}
+
+.verification {
+  color: rgba(236, 242, 248, 0.4);
+}
+
+main {
+  font-size: 13px;
+}
+
+img {
+  border-radius: 100%;
+  height: 2rem;
+  border: rgba(236, 242, 248, 0.329) solid 2px;
+}
+
+.container {
+  padding: 8rem;
+  display: -ms-grid;
+  display: grid;
+  grid-gap: 1.5rem;
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-areas: "purple      purple lightBlue  white2" "white1 darkBlue  darkBlue white2";
+}
+
+.user {
+  display: inline-block;
+  position: relative;
+  bottom: 0.2rem;
+  left: 1em;
+}
+
+.name {
+  bottom: 1.3rem;
+  left: 1rem;
+}
+
+.verification {
+  right: 4rem;
+}
+
+.card {
+  border-radius: 10px;
+  padding: 2rem;
+  color: white;
+}
+
+.card.purpleCard {
+  background-image: url("/testimonials/images/bg-pattern-quotation.svg");
+  background-repeat: no-repeat;
+  background-position: top right 5em;
+  background-color: #7541c8;
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: purple;
+}
+
+.card.darkBlueCard {
+  background-color: #242b38;
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 2;
+  grid-area: darkBlue;
+}
+
+.card.lightBlueCard {
+  background-color: #48556a;
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+  grid-area: lightBlue;
+}
+
+.whiteCard1,
+.whiteCard2 {
+  background-color: white;
+}
+
+.whiteCard1 .verification,
+.whiteCard2 .verification {
+  color: rgba(36, 43, 56, 0.3);
+  font-weight: bold;
+}
+
+.whiteCard1 .name,
+.whiteCard2 .name {
+  font-weight: bold;
+}
+
+.whiteCard1 p,
+.whiteCard1 h1,
+.whiteCard2 p,
+.whiteCard2 h1 {
+  color: rgba(36, 43, 56, 0.7);
+}
+
+.whiteCard1 img,
+.whiteCard2 img {
+  border: rgba(28, 31, 34, 0.329) solid 2px;
+}
+
+p {
+  color: rgba(207, 207, 207, 0.7);
+  line-height: 1.3rem;
+  font-size: 1.2em;
+}
+
+.whiteCard1 {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: white1;
+}
+
+.whiteCard2 {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 4;
+  grid-area: white2;
+}
+
+@media only screen and (max-width: 700px) {
+  .container {
+    padding: 4rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+/*# sourceMappingURL=style.css.map */
