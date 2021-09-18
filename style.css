@@ -30,9 +30,11 @@ img {
   display: -ms-grid;
   display: grid;
   grid-gap: 1.5rem;
-  -ms-grid-columns: (1fr)[4];
-      grid-template-columns: repeat(4, 1fr);
-      grid-template-areas: "purple      purple lightBlue  white2" "white1 darkBlue  darkBlue white2";
+  -ms-grid-columns: (1fr) [4];
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-areas:
+    "purple      purple lightBlue  white2"
+    "white1 darkBlue  darkBlue white2";
 }
 
 .user {
@@ -58,7 +60,7 @@ img {
 }
 
 .card.purpleCard {
-  background-image: url("/testimonials/images/bg-pattern-quotation.svg");
+  background-image: url("images/bg-pattern-quotation.svg");
   background-repeat: no-repeat;
   background-position: top right 5em;
   background-color: #7541c8;
@@ -138,8 +140,8 @@ p {
     display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
   }
 }
 /*# sourceMappingURL=style.css.map */
